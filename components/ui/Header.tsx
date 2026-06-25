@@ -91,13 +91,13 @@ const Header = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.04, duration: 0.2 }}
                   >
-                    <Link
+                    <a
                       href={l.href}
                       onClick={() => setOpen(false)}
                       className="block text-white/80 hover:text-lime-400 text-sm font-medium py-2 border-b border-white/5 last:border-none transition-colors duration-200"
                     >
                       {l.label}
-                    </Link>
+                    </a>
                   </motion.div>
                 ))}
                 <motion.div

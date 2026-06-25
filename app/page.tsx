@@ -11,12 +11,15 @@ import HowWork from "@/components/how-work";
 import Services from "@/components/services";
 import Projects from "@/components/projects";
 import Reviews from "@/components/reviews";
+import { ScrollFab } from "@/components/ui/scroll-fab";
 
 export default function Home() {
   return (
     <>
       <main>
+        {/* <ScrollFab /> */}
         <MainHero />
+
         <AboutMe />
         <HowWork />
         <Services />
