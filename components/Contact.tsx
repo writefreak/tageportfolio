@@ -2,7 +2,8 @@
 
 import { ArrowUpRight, FolderGit2, Link2, Mail } from "lucide-react";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const contactLinks = [
   {
@@ -29,6 +30,9 @@ export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", description: "" });
   const [sent, setSent] = useState(false);
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false, margin: "-80px" });
+
   const handleSubmit = async () => {
     if (!form.name || !form.email || !form.description) return;
     setSent(true);
@@ -40,7 +44,13 @@ export default function Contact() {
       id="contact"
       className="mx-auto max-w-5xl px-6 py-20 sm:px-8 sm:py-28"
     >
-      <div className="rounded-3xl border border-border bg-[#1a1a1a] px-8 py-14 sm:px-16 sm:py-20">
+      <motion.div
+        ref={ref}
+        className="rounded-3xl border border-border bg-[#1a1a1a] px-8 py-14 sm:px-16 sm:py-20"
+        initial={{ y: 40, opacity: 0 }}
+        animate={isInView ? { y: 0, opacity: 1 } : {}}
+        transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           {/* Left */}
           <div>
@@ -149,7 +159,7 @@ export default function Contact() {
             </motion.button>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
