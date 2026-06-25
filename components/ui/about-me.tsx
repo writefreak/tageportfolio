@@ -9,7 +9,7 @@ const p1Words =
     " ",
   );
 const p2Words =
-  "Over the years, I've designed and shipped websites and web applications for clients across industries, helping them launch faster and look better doing it.".split(
+  "I've designed and shipped functional websites and mobile applications for several satisfied clients, helping them launch faster and look better doing it.".split(
     " ",
   );
 const allWords = [...p1Words, ...p2Words];
