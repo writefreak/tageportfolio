@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 import CustomCursor from "@/components/ui/custom-cursor";
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
+import SmoothScroll from "@/components/ui/smooth-scroll";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -122,10 +123,12 @@ export default function RootLayout({
       <body
         className={`${bricolage.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased`}
       >
-        <Header />
-        {/* <CustomCursor /> */}
-        {children}
-        <Footer />
+        <SmoothScroll>
+          <Header />
+          {/* <CustomCursor /> */}
+          {children}
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );

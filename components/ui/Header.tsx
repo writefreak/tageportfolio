@@ -6,11 +6,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 
 const links = [
-  { label: "Home", href: "/" },
-  { label: "Portfolio", href: "/portfolio" },
-  { label: "About Me", href: "/about" },
-  { label: "Reviews", href: "/reviews" },
-  { label: "Contact", href: "/contact" },
+  { label: "About Me", href: "#about" },
+  { label: "How I Work", href: "#work" },
+  { label: "Services", href: "#services" },
+  { label: "Projects", href: "#projects" },
+  { label: "Testimonials", href: "#testimonials" },
 ];
 
 const Header = () => {

@@ -33,7 +33,7 @@ const reviews = [
 
 const Reviews = () => {
   return (
-    <section className="px-8 md:px-16 lg:px-24 py-24">
+    <section id="testimonials" className="px-8 md:px-16 lg:px-24 py-24">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

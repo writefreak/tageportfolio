@@ -27,7 +27,7 @@ const capabilities = [
 export default function HowWork() {
   return (
     <motion.section
-      id="about"
+      id="work"
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.1 }}

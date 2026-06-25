@@ -41,7 +41,7 @@ const Services = () => {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <section className=" px-8 md:px-16 lg:px-24 py-24">
+    <section id="services" className=" px-8 md:px-16 lg:px-24 py-24">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="flex items-end justify-between mb-16">

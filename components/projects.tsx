@@ -17,6 +17,7 @@ const Projects = () => {
 
   return (
     <motion.section
+      id="projects"
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.1 }}

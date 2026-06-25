@@ -95,7 +95,11 @@ const AboutMe = () => {
   const p1End = p1Words.length / totalWords;
 
   return (
-    <div ref={sectionRef} style={{ height: "calc(250 * var(--svh, 1vh))" }}>
+    <div
+      id="about"
+      ref={sectionRef}
+      style={{ height: "calc(250 * var(--svh, 1vh))" }}
+    >
       <section className="sticky top-0 min-h-screen bg-[#f0ece4] px-8 md:px-16 lg:px-24 py-20 flex items-center">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full max-w-6xl mx-auto items-center">
           {/* Left */}
