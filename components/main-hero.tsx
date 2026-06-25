@@ -1,14 +1,64 @@
-import { ArrowUpRight, ChevronRight } from "lucide-react";
+"use client";
+import { ArrowUpRight } from "lucide-react";
 
 export default function MainHero() {
   return (
-    <section className="relative mx-auto h-100 justify-center md:min-h-screen flex flex-col items-center md:px-14 px-6 pt-36 pb-20 sm:px-8 sm:pt sm:pb overflow-hidden">
-      {/* Gradient + noise background layer */}
+    <section className="relative mx-auto h-[600px] md:min-h-screen flex flex-col justify-between px-6 sm:px-8 md:px-14 pt-36 pb-10 overflow-hidden">
+      {/* Gridlines */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `
+            linear-gradient(to right, rgba(0,0,0,0.04) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(0,0,0,0.04) 1px, transparent 1px)
+          `,
+          backgroundSize: "80px 80px",
+        }}
+      />
 
-      <div className="max-w-2xl flex flex-col items-center">
-        <h1 className="font-display text-black text-5xl uppercase text-center leading-none tracking-tight font-extrabold sm:text-7xl sm:leading-[1.12] lg:text-[160px]">
-          Frontend <br /> Engineer
+      {/* Main text */}
+      <div className="flex flex-col items-center justify-center w-full md:mt-auto">
+        <h1
+          className="font-display text-[#1a1a1a] uppercase text-center leading-none tracking-tight font-black w-full"
+          style={{ fontSize: "clamp(52px, 14vw, 160px)" }}
+        >
+          Frontend
         </h1>
+        <h1
+          className="font-display text-[#1a1a1a] uppercase text-center leading-none tracking-tight font-black w-full"
+          style={{ fontSize: "clamp(52px, 14vw, 160px)" }}
+        >
+          Engineer
+        </h1>
+      </div>
+
+      {/* Bottom bar */}
+      <div className="flex items-end justify-between pt-8 pb-4 gap-4">
+        <span
+          className="font-display font-black text-[#1a1a1a] leading-none shrink-0"
+          style={{ fontSize: "clamp(20px, 4vw, 40px)" }}
+        >
+          ©{new Date().getFullYear()}
+        </span>
+
+        <button
+          onClick={() => {
+            const phone = "2349169615448";
+            const message =
+              "Hi Heritage, I have a project in mind and I would like to bring it to life with your help.";
+            window.open(
+              `https://wa.me/${phone}?text=${encodeURIComponent(message)}`,
+              "_blank",
+            );
+          }}
+          className="flex items-center gap-2 font-display font-semibold text-[#1a1a1a]/50 hover:text-[#1a1a1a] transition-colors duration-300 group"
+          style={{ fontSize: "clamp(9px, 1.8vw, 14px)" }}
+        >
+          /AVAILABLE FOR WORK
+          <span className="w-7 h-7 shrink-0 rounded-full border border-current flex items-center justify-center group-hover:bg-[#0f0f0f] group-hover:text-white group-hover:border-[#0f0f0f] transition-all duration-300">
+            <ArrowUpRight size={12} />
+          </span>
+        </button>
       </div>
     </section>
   );

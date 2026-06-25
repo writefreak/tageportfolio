@@ -28,13 +28,15 @@ const Header = () => {
     <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4 px-4 pointer-events-none">
       <motion.div
         layout
-        className="bg-[#1a1a1a] rounded-2xl overflow-hidden w-[300px] pointer-events-auto"
+        className="bg-[#1a1a1a] rounded-2xl overflow-hidden w-75 pointer-events-auto"
         style={{ borderRadius: 16 }}
       >
         <div className="flex items-center justify-between px-4 py-3">
-          <span className="text-white font-bold text-base tracking-tight">
-            Heritage
-          </span>
+          <Link href={"/"}>
+            <span className="text-white font-display font-bold text-sm md:text-base tracking-tight">
+              Heritage
+            </span>
+          </Link>
           <button
             onClick={() => setOpen((v) => !v)}
             className="bg-white/90 rounded-xl w-9 h-9 flex items-center justify-center transition-all duration-200 active:scale-95"
@@ -57,7 +59,7 @@ const Header = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.18 }}
-                  className="flex gap-[3px] items-center"
+                  className="flex gap-0.75 items-center"
                 >
                   {[0, 1, 2].map((i) => (
                     <span

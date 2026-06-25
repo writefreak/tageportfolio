@@ -67,10 +67,9 @@ body {
 }
 
 ::selection {
-  background: var(--accent-soft);
-  color: var(--foreground);
+  background: #9ae600;
+  color: #1a1a1a;
 }
-
 /* Thin scrollbar that matches the dark surface instead of
    the system default, kept subtle. */
 ::-webkit-scrollbar {
@@ -80,8 +79,8 @@ body {
   background: var(--background);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--border-strong);
-  border-radius: 6px;
+  background: #9ae600;
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent-dim);

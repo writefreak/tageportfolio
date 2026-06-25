@@ -25,7 +25,7 @@ const CustomCursor = () => {
       {/* Dot */}
       <motion.div
         style={{ x, y }}
-        className="fixed top-0 left-0 w-5 h-5 bg-lime-400 rounded-full z-[9999] pointer-events-none -translate-x-1/2 -translate-y-1/2"
+        className="fixed top-0 left-0 w-5 h-5 bg-lime-400 rounded-full z-9999 pointer-events-none -translate-x-1/2 -translate-y-1/2"
       />
       {/* Ring */}
       {/* <motion.div

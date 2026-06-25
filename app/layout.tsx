@@ -9,6 +9,8 @@ import {
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import CustomCursor from "@/components/ui/custom-cursor";
+import Header from "@/components/ui/Header";
+import Footer from "@/components/ui/Footer";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -116,11 +118,14 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
+
       <body
-        className={`${bricolage.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased cursor-none`}
+        className={`${bricolage.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased`}
       >
-        <CustomCursor />
+        <Header />
+        {/* <CustomCursor /> */}
         {children}
+        <Footer />
       </body>
     </html>
   );
