@@ -16,20 +16,15 @@ import Reviews from "@/components/reviews";
 export default function Home() {
   return (
     <>
-      {/* <ScrollProgress /> */}
-
-      {/* <Header /> */}
       <main>
         <MainHero />
         <AboutMe />
         <HowWork />
-        {/* <TechMarquee /> */}
         <Services />
         <Projects />
         <Reviews />
         <Contact />
       </main>
-      {/* <Footer /> */}
     </>
   );
 }
