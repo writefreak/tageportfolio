@@ -9,7 +9,6 @@ import Mobileheader from "@/components/ui/mobile-header";
 import MainHero from "@/components/main-hero";
 import AboutMe from "@/components/ui/about-me";
 import HowWork from "@/components/how-work";
-import TechMarquee from "@/components/ui/3d-marquee";
 import Services from "@/components/services";
 import Projects from "@/components/projects";
 import Reviews from "@/components/reviews";
@@ -30,7 +29,7 @@ export default function Home() {
         <Reviews />
         <Contact />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

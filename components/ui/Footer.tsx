@@ -22,7 +22,7 @@ const Footer = () => {
           transition={{ duration: 0.5 }}
           className="md:col-span-2"
         >
-          <h2 className="text-[#F3F0EC] font-display font-black leading-[1.05] text-4xl md:text-5xl">
+          <h2 className="text-[#F3F0EC] font-display font-black leading-[1.05] text-4xl lg:text-5xl md:text-3xl">
             Building Unique <br />& Seamless User Experiences.
           </h2>
         </motion.div>

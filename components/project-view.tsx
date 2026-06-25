@@ -31,11 +31,11 @@ export default function ProjectView({ project }: { project: Project }) {
             }}
           >
             <Link
-              href="/#projects"
+              href="/"
               className="inline-flex items-center gap-2 text-sm font-medium text-[#1a1a1a]/60 hover:text-[#1a1a1a] transition-colors duration-300"
             >
               <ArrowLeft size={14} />
-              Back to work
+              Go Back
             </Link>
           </motion.div>
 
