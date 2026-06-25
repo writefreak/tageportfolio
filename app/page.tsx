@@ -1,6 +1,5 @@
 import Header from "@/components/ui/Header";
 import Hero from "@/components/Hero";
-import Work from "@/components/Work";
 import About from "@/components/how-work";
 import Contact from "@/components/Contact";
 import Footer from "@/components/ui/Footer";
