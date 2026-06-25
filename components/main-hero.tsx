@@ -1,5 +1,6 @@
 "use client";
 import { ArrowUpRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function MainHero() {
   return (
@@ -17,23 +18,38 @@ export default function MainHero() {
       />
 
       {/* Main text */}
-      <div className="flex flex-col items-center justify-center w-full md:mt-auto">
-        <h1
-          className="font-display text-[#1a1a1a] uppercase text-center leading-none tracking-tight font-black w-full"
-          style={{ fontSize: "clamp(52px, 14vw, 160px)" }}
-        >
-          Frontend
-        </h1>
-        <h1
-          className="font-display text-[#1a1a1a] uppercase text-center leading-none tracking-tight font-black w-full"
-          style={{ fontSize: "clamp(52px, 14vw, 160px)" }}
-        >
-          Engineer
-        </h1>
+      <div className="flex flex-col items-center justify-center w-full md:mt-auto overflow-hidden">
+        <div className="overflow-hidden">
+          <motion.h1
+            className="font-display text-[#1a1a1a] uppercase text-center leading-none tracking-tight font-black w-full"
+            style={{ fontSize: "clamp(52px, 14vw, 160px)" }}
+            initial={{ y: "100%" }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          >
+            Frontend
+          </motion.h1>
+        </div>
+        <div className="overflow-hidden">
+          <motion.h1
+            className="font-display text-[#1a1a1a] uppercase text-center leading-none tracking-tight font-black w-full"
+            style={{ fontSize: "clamp(52px, 14vw, 160px)" }}
+            initial={{ y: "100%" }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.08 }}
+          >
+            Engineer
+          </motion.h1>
+        </div>
       </div>
 
       {/* Bottom bar */}
-      <div className="flex items-end justify-between pt-8 pb-4 gap-4">
+      <motion.div
+        className="flex items-end justify-between pt-8 pb-4 gap-4"
+        initial={{ y: 16, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.35 }}
+      >
         <span
           className="font-display font-black text-[#1a1a1a] leading-none shrink-0"
           style={{ fontSize: "clamp(20px, 4vw, 40px)" }}
@@ -59,7 +75,7 @@ export default function MainHero() {
             <ArrowUpRight size={12} />
           </span>
         </button>
-      </div>
+      </motion.div>
     </section>
   );
 }
