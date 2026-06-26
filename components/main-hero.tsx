@@ -1,10 +1,11 @@
 "use client";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
+import ServiceMarquee from "./ui/service-marquee";
 
 export default function MainHero() {
   return (
-    <section className="relative mx-auto h-[600px] md:min-h-screen flex flex-col justify-between px-6 sm:px-8 md:px-14 pt-36 pb-10 overflow-hidden">
+    <section className="relative mx-auto h-150 md:h-screen flex flex-col justify-between px-6 sm:px-8 md:px-14 pt-30 pb-10 overflow-hidden">
       {/* Gridlines */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -18,7 +19,7 @@ export default function MainHero() {
       />
 
       {/* Main text */}
-      <div className="flex flex-col items-center justify-center w-full md:mt-auto overflow-hidden">
+      <div className="flex flex-col items-center justify-center w-full h-full overflow-hidden">
         <div className="overflow-hidden">
           <motion.h1
             className="font-display text-[#1a1a1a] uppercase text-center leading-none tracking-tight font-black w-full"
@@ -42,6 +43,9 @@ export default function MainHero() {
           </motion.h1>
         </div>
       </div>
+      {/* <div className="pt-10">
+        <ServiceMarquee />
+      </div> */}
 
       {/* Bottom bar */}
       <motion.div

@@ -12,7 +12,7 @@ export function ProjectCard({
 }) {
   return (
     <Link href={`/projects/${project.slug}`}>
-      <article className="group relative overflow-hidden rounded-2xl h-[200px] md:h-[270px] w-full">
+      <article className="group relative overflow-hidden rounded-2xl h-[200px] md:h-[380px] w-full">
         <img
           src={imageSrc}
           alt={project.title}

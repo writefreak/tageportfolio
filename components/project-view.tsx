@@ -120,7 +120,7 @@ export default function ProjectView({ project }: { project: Project }) {
                 transition: { duration: 0.6, ease, delay: 0.15 },
               },
             }}
-            className="mt-10 space-y-5 max-w-4xl"
+            className="mt-10 space-y-5 max-w-2xl md:max-w-4xl"
           >
             <p className="text-sm md:text-lg text-[#1a1a1a]/80 leading-relaxed">
               {project.longDesc}
